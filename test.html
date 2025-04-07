@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Lorenzo de Almagro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #002856;
+            --secondary-color: #e30613;
+            --text-color: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: var(--text-color);
+            animation: fadeInDown 1s ease;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 40, 86, 0.8), rgba(0, 40, 86, 0.8)),
+                        url('https://i.pinimg.com/736x/e6/ee/e1/e6eee1fb7f7578ac18d46a21263434ad.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-color);
+            margin-bottom: 40px;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease 0.3s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .stat-item i {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .stat-item h3 {
+            font-size: 2em;
+            color: var(--secondary-color);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .social-links {
+            margin: 20px 0;
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            font-size: 1.5em;
+            margin: 0 10px;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 5px 0;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Club Atlético San Lorenzo de Almagro</h1>
+    </header>
+
+    <nav>
+        <a href="#"><i class="fas fa-home"></i> Inicio</a>
+        <a href="#"><i class="fas fa-newspaper"></i> Noticias</a>
+        <a href="#"><i class="fas fa-users"></i> Jugadores</a>
+        <a href="#"><i class="fas fa-book"></i> Historia</a>
+        <a href="#"><i class="fas fa-envelope"></i> Contacto</a>
+    </nav>
+
+    <div class="hero">
+        <div>
+            <h2>¡Bienvenido Cuervo! ♕</h2>
+            <p>El Ciclón de Boedo, el club más grande del mundo. Una historia de gloria, pasión y tradición.</p>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="stats">
+            <div class="stat-item">
+                <i class="fas fa-trophy"></i>
+                <h3>15</h3>
+                <p>Títulos Nacionales</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-star"></i>
+                <h3>1</h3>
+                <p>Copa Libertadores</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-globe-americas"></i>
+                <h3>1</h3>
+                <p>Copa Sudamericana</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>1908</h3>
+                <p>Año de Fundación</p>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <img src="https://i.pinimg.com/736x/e6/ee/e1/e6eee1fb7f7578ac18d46a21263434ad.jpg" alt="Escudo San Lorenzo">
+                <h3>Nuestra Historia</h3>
+                <p>Fundado el 1 de abril de 1908, San Lorenzo nació en el barrio de Almagro gracias a la iniciativa del padre Lorenzo Massa.</p>
+            </div>
+            <div class="card">
+                <img src="https://www.infobae.com/new-resizer/8J8YQZQZQZQZQZQZQZQZQZQZQZQ=/1200x800/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/QZQZQZQZQZQZQZQZQZQZQZQZQZQ.jpg" alt="Estadio">
+                <h3>El Nuevo Gasómetro</h3>
+                <p>Nuestro hogar, el Estadio Pedro Bidegain, conocido como el Nuevo Gasómetro, es uno de los más modernos de Sudamérica.</p>
+            </div>
+            <div class="card">
+                <img src="https://www.infobae.com/new-resizer/QZQZQZQZQZQZQZQZQZQZQZQZQZQ=/1200x800/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/8J8YQZQZQZQZQZQZQZQZQZQZQZQ.jpg" alt="Hinchada">
+                <h3>La Hinchada</h3>
+                <p>La barra brava más grande del mundo, conocida como "La Gloriosa", es reconocida por su pasión y compromiso.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/lautignz/?hl=es-la"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2025 - Página no oficial de San Lorenzo, hecho por Lauti para la facu ★</p>
+    </footer>
+</body>
+</html>
