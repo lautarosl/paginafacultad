@@ -1,71 +1,72 @@
 <!DOCTYPE html>
-<html lang="es">
+<html> 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>San Lorenzo de Almagro</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #002856;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #002856;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        nav {
-            background-color: #002856;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        main {
-            padding: 30px;
-            text-align: center;
-        }
-        footer {
-            background-color: #002856;
-            text-align: center;
-            padding: 10px;
-            font-size: 0.9em;
-        }
-    </style>
+ 
+    <title>Document</title>
+ 
 </head>
-<body>
-    <header>
-        <h1>Club Atletico San Lorenzo de Almagro</h1>
+<body>  
+
+<!--BR se usa para saltar una linea y que quede mas organizado
+-->
+<!--label es para poner un nombre al input que seria el nombre de la etiqueta/boton -->  
+    <form action="/Formulario">
+        <label for="Fecha en la que San Lorenzo campeono">Fecha en la que San Lorenzo campeono"</label>   
+        <input type="date" id="Fecha" name="Fecha">
+        <br>    
+        <label for="Que equipo tenia ese San Lorenzo">Jugadores campeones</label>
+        <br>
+        <input type="text" id="jugadores" name="jugadores"> 
+        <br>    
+        <br>
+
+        <textarea name="comentario" id="comentario" cols="30" rows="10">Especificar los jugadores</textarea> 
+        <br>
+        <button type="reset">Resetear</button>
+        <button type="submit">Enviar</button>
+        <button type="button">Boton</button> 
+    </form> 
+    
+<!--Botones con tipo reset, submit y button-->
+   
+    
+    
+    <header> 
+
+        <h1> Esta es mi primer pagina</h1>
+        <h2> Esto es un h2 </h2>
+        <h3> Esto es un h3 </h3>
+        <h4> Esto es un h4</h4>
+        <h5> Esto es un h5</h5>
+        <h6> Esto es un h6</h6>
+        
+        <!--img src es para poner una imagen--> 
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStrP-rdLVNI5nZ-hLq8GdF67DiNbPyXpKEyw&s" alt="Lali <3">
+        <!--imagen local descargada--> 
+        <img src="C:\Users\Alumnos\Pictures\imgaen.jpg" alt="El equipo <3">
+    
     </header>
 
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Noticias</a>
-        <a href="#">Jugadores</a>
-        <a href="#">Historia</a>
-        <a href="#">Contacto</a>
-    </nav>
 
-    <main>
-        <h2>Bienvenido cuervo! ♕</h2>
-        <p>Este es un sitio dedicado al Ciclón. Acá vas a encontrar noticias, historia y mucho más sobre el club más grande del mundo.</p>
-        <img src="https://i.pinimg.com/736x/e6/ee/e1/e6eee1fb7f7578ac18d46a21263434ad.jpg" alt="Escudo San Lorenzo" width="200">
-    
-    </main>
 
+
+
+        <!--Pie de pagina--> 
     <footer>
-        &copy; 2025 - Pagina no oficial de San Lorenzo, hecho por Lauti para la facu ★
+    
+        <!--href Para ir a Promiedos--> 
+        <a href="https://www.promiedos.com.ar/">Entrar a Promiedos</a>
+       
+        <!--Para ir a la pagina de promiedos pero en otra pestaña--> 
+        <a target="_blank" href="https://www.promiedos.com.ar/">Otra pagina promiedos</a>
+       
+        <!--Para ir al inicio--> 
+        <a href="#Inicio">Ir al inicio</a> 
+    
     </footer>
+
+
+
+
 </body>
 </html>
