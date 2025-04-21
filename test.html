@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  
-   
+    
     <title>San Lorenzo de Almagro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -66,7 +65,7 @@
             transform: translateY(-2px);
         }
 
-        .hero {
+        .titulo {
             background: linear-gradient(rgba(0, 40, 86, 0.8), rgba(0, 40, 86, 0.8)),
                         url('fondosanlorenzo.jpg');
             background-size: cover;
@@ -80,13 +79,13 @@
             margin-bottom: 40px;
         }
 
-        .hero h2 {
+        .titulo h2 {
             font-size: 3em;
             margin-bottom: 20px;
             animation: fadeInUp 1s ease;
         }
 
-        .hero p {
+        .titulo p {
             font-size: 1.2em;
             max-width: 600px;
             margin: 0 auto;
@@ -101,14 +100,14 @@
             padding: 40px 20px;
         }
 
-        .card-container {
+        .contenedordefotos {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
 
-        .card {
+        .fotos {
             background: white;
             border-radius: 10px;
             padding: 20px;
@@ -116,11 +115,11 @@
             transition: var(--transition);
         }
 
-        .card:hover {
+        .fotos:hover {
             transform: translateY(-10px);
         }
 
-        .card img {
+        .fotos img {
             width: 100%;
             height: 200px;
             object-fit: cover;
@@ -133,25 +132,25 @@
             margin-bottom: 10px;
         }
 
-        .stats {
+        .estadisticas {
             display: flex;
             justify-content: space-around;
             margin: 40px 0;
             flex-wrap: wrap;
         }
 
-        .stat-item {
+        .itemsestadisticas {
             text-align: center;
             padding: 20px;
         }
 
-        .stat-item i {
+        .itemsestadisticas i {
             font-size: 2.5em;
             color: var(--primary-color);
             margin-bottom: 10px;
         }
 
-        .stat-item h3 {
+        .itemsestadisticas h3 {
             font-size: 2em;
             color: var(--secondary-color);
         }
@@ -231,10 +230,10 @@
         <a href="#"><i class="fas fa-newspaper"></i> Noticias</a>
         <a href="#"><i class="fas fa-users"></i> Jugadores</a>
         <a href="#"><i class="fas fa-book"></i> Historia</a>
-        <a href="#"><i class="fas fa-envelope"></i> Contacto</a>
+        <a href="#"><i class="contacto"></i> Contacto</a>
     </nav>
 
-    <div class="hero">
+    <div class="titulo">
         <div>
             <h2>¡Bienvenido Cuervo!</h2>
             <p>El Ciclón de Boedo, el club más grande del mundo. Una historia de gloria, pasión y tradición.</p>
@@ -242,42 +241,42 @@
     </div>
 
     <div class="content-section">
-        <div class="stats">
-            <div class="stat-item">
+        <div class="estadisticas">
+            <div class="itemsestadisticas">
                 <i class="fas fa-trophy"></i>
                 <h3>15</h3>
                 <p>Títulos Nacionales</p>
             </div>
-            <div class="stat-item">
+            <div class="itemsestadisticas">
                 <i class="fas fa-star"></i>
                 <h3>1</h3>
                 <p>Copa Libertadores</p>
             </div>
-            <div class="stat-item">
+            <div class="itemsestadisticas">
                 <i class="fas fa-globe-americas"></i>
                 <h3>1</h3>
                 <p>Copa Sudamericana</p>
             </div>
-            <div class="stat-item">
+            <div class="itemsestadisticas">
                 <i class="fas fa-calendar-alt"></i>
                 <h3>1908</h3>
                 <p>Año de Fundación</p>
             </div>
         </div>
 
-        <div class="card-container">
-            <div class="card">
+        <div class="contenedordefotos">
+            <div class="fotos">
                 <img src="fondosanlorenzo.jpg" alt="Escudo San Lorenzo">
                 <h3>Nuestra Historia</h3>
                 <p>Fundado el 1 de abril de 1908, San Lorenzo nació en el barrio de Almagro gracias a la iniciativa del padre Lorenzo Massa.</p>
             </div>
-            <div class="card">
-                <img src="https://www.infobae.com/new-resizer/8J8YQZQZQZQZQZQZQZQZQZQZQZQ=/1200x800/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/QZQZQZQZQZQZQZQZQZQZQZQZQZQ.jpg" alt="Estadio">
+            <div class="fotos">
+                <img src="estadiosanlorenzo.jpg" alt="Estadio">
                 <h3>El Nuevo Gasómetro</h3>
                 <p>Nuestro hogar, el Estadio Pedro Bidegain, conocido como el Nuevo Gasómetro, es uno de los más modernos de Sudamérica.</p>
             </div>
-            <div class="card">
-                <img src="https://www.infobae.com/new-resizer/QZQZQZQZQZQZQZQZQZQZQZQZQZQ=/1200x800/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/8J8YQZQZQZQZQZQZQZQZQZQZQZQ.jpg" alt="Hinchada">
+            <div class="fotos">
+                <img src="hinchadasanlorenzo.jpg" alt="Hinchada">
                 <h3>La Hinchada</h3>
                 <p>La barra brava más grande del mundo, conocida como "La Gloriosa", es reconocida por su pasión y compromiso.</p>
             </div>
