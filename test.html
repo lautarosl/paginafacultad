@@ -12,11 +12,11 @@
             --transition: all 0.3s ease;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        *  { /* Codigo universal, le indica a la pagina que: */
+            margin: 0; /*  Eliminar cualquier margen que los navegadores puedan aplicar por defecto a los elementos */
+            padding: 0; /*  Eliminar cualquier relleno (espacio interior) que los navegadores puedan aplicar por defecto a los elementos */
+            box-sizing: border-box; /* Cambiar cómo se calculan los tamaños de los elementos, para que el ancho y la altura incluyan los bordes y el relleno, no solo el contenido */
+        } 
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -27,7 +27,7 @@
 
         header {
             background-color: var(--primary-color);
-            padding: 20px;
+            padding: 20px; /** el tamaño del color del fondo del titulo*/
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -64,20 +64,21 @@
             background-color: var(--secondary-color);
             transform: translateY(-2px);
         }
-
         .titulo {
             background: linear-gradient(rgba(0, 40, 86, 0.8), rgba(0, 40, 86, 0.8)),
-                        url('fondosanlorenzo.jpg');
+                url('fotos/casla3.jpg'); /* Imagen de fondo */
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             height: 400px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: var(--text-color);
+            color: white; /* O el color que quieras */
+            padding: 50px;
             margin-bottom: 40px;
-        }
+}
 
         .titulo h2 {
             font-size: 3em;
@@ -87,14 +88,14 @@
 
         .titulo p {
             font-size: 1.2em;
-            max-width: 600px;
+            max-width: 600px;||
             margin: 0 auto;
             animation: fadeInUp 1s ease 0.3s;
             opacity: 0;
             animation-fill-mode: forwards;
         }
 
-        .content-section {
+        .contenedorestadisticas {
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
@@ -218,6 +219,7 @@
                 font-size: 2em;
             }
         }
+        
     </style>
 </head>
 <body>
@@ -225,22 +227,23 @@
         <h1>Club Atlético San Lorenzo de Almagro</h1>
     </header>
 
-    <nav>
+    <nav> 
         <a href="#"><i class="fas fa-home"></i> Inicio</a>
         <a href="#"><i class="fas fa-newspaper"></i> Noticias</a>
         <a href="#"><i class="fas fa-users"></i> Jugadores</a>
         <a href="#"><i class="fas fa-book"></i> Historia</a>
-        <a href="#"><i class="contacto"></i> Contacto</a>
-    </nav>
+        <a href="#"><i class="fas fa-phone"></i> Contacto</a>
+    </nav> <!-- Es para mejorar la accesibilidad, como que pones botones para ir a otros lados-->
 
     <div class="titulo">
         <div>
+            <a class="fondotitulo" href="fotos/casla3.jpg"></a>
             <h2>¡Bienvenido Cuervo!</h2>
             <p>El Ciclón de Boedo, el club más grande del mundo. Una historia de gloria, pasión y tradición.</p>
         </div>
     </div>
 
-    <div class="content-section">
+    <div class="contenedorestadisticas">
         <div class="estadisticas">
             <div class="itemsestadisticas">
                 <i class="fas fa-trophy"></i>
@@ -266,17 +269,17 @@
 
         <div class="contenedordefotos">
             <div class="fotos">
-                <img src="fondosanlorenzo.jpg" alt="Escudo San Lorenzo">
+                <img src="fotos/casla1.jpg" alt="Escudo San Lorenzo">
                 <h3>Nuestra Historia</h3>
                 <p>Fundado el 1 de abril de 1908, San Lorenzo nació en el barrio de Almagro gracias a la iniciativa del padre Lorenzo Massa.</p>
             </div>
             <div class="fotos">
-                <img src="estadiosanlorenzo.jpg" alt="Estadio">
+                <img src="fotos/facucasla.jpg" alt="Estadio">
                 <h3>El Nuevo Gasómetro</h3>
                 <p>Nuestro hogar, el Estadio Pedro Bidegain, conocido como el Nuevo Gasómetro, es uno de los más modernos de Sudamérica.</p>
             </div>
             <div class="fotos">
-                <img src="hinchadasanlorenzo.jpg" alt="Hinchada">
+                <img src="fotos/casla2.jpeg" alt="Hinchada">
                 <h3>La Hinchada</h3>
                 <p>La barra brava más grande del mundo, conocida como "La Gloriosa", es reconocida por su pasión y compromiso.</p>
             </div>
