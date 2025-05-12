@@ -1,72 +1,80 @@
-<!DOCTYPE html>
-<html> 
+<!DOCTYPE html> <!-- Indica que el documento es HTML5 -->
+<html lang="es"> <!-- Define el idioma principal de la página -->
+
 <head>
- 
-    <title>Document</title>
- 
+    <meta charset="UTF-8"> <!-- Codificación de caracteres para soportar tildes y ñ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Para que sea responsive en móviles -->
+    <title>San Lorenzo de Almagro</title> <!-- Título que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="estilos.css"> <!-- Vincula la hoja de estilos CSS -->
 </head>
-<body>  
 
-<!--BR se usa para saltar una linea y que quede mas organizado
--->
-<!--label es para poner un nombre al input que seria el nombre de la etiqueta/boton -->  
-    <form action="/Formulario">
-        <label for="Fecha en la que San Lorenzo campeono">Fecha en la que San Lorenzo campeono"</label>   
-        <input type="date" id="Fecha" name="Fecha">
-        <br>    
-        <label for="Que equipo tenia ese San Lorenzo">Jugadores campeones</label>
-        <br>
-        <input type="text" id="jugadores" name="jugadores"> 
-        <br>    
-        <br>
+<body>
 
-        <textarea name="comentario" id="comentario" cols="30" rows="10">Especificar los jugadores</textarea> 
-        <br>
-        <button type="reset">Resetear</button>
-        <button type="submit">Enviar</button>
-        <button type="button">Boton</button> 
-    </form> 
-    
-<!--Botones con tipo reset, submit y button-->
-   
-    
-    
-    <header> 
-
-        <h1> Esta es mi primer pagina</h1>
-        <h2> Esto es un h2 </h2>
-        <h3> Esto es un h3 </h3>
-        <h4> Esto es un h4</h4>
-        <h5> Esto es un h5</h5>
-        <h6> Esto es un h6</h6>
-        
-        <!--img src es para poner una imagen--> 
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStrP-rdLVNI5nZ-hLq8GdF67DiNbPyXpKEyw&s" alt="Lali <3">
-        <!--imagen local descargada--> 
-        <img src="C:\Users\Alumnos\Pictures\imgaen.jpg" alt="El equipo <3">
-    
+    <header> <!-- Encabezado principal -->
+        <h1>Club Atlético San Lorenzo de Almagro</h1>
     </header>
 
+    <nav> <!-- Menú de navegación -->
+        <a href="#">Inicio</a> <!-- Enlace a la sección de inicio -->
+        <a href="#">Noticias</a> <!-- Enlace a la sección de noticias -->
+        <a target="_blank" href="index3.html">Jugadores</a> <!-- Enlace a la sección de jugadores Abre en nueva pestaña otra página (index3.html) -->
+        <a href="#">Historia</a> <!-- Enlace a la sección de historia -->
+        <a target="_blank" href="index2.html">Contacto</a> <!-- Abre en nueva pestaña otra página (index2.html) -->
+    </nav>
 
+    <div class="titulo"> <!-- Sección principal de bienvenida -->
+        <div>
+            <h2>¡Bienvenido Cuervo!</h2> <!-- Subtítulo de bienvenida -->
+            <p>El Ciclón de Boedo, el club más grande del mundo. Una historia de gloria, pasión y tradición.</p> <!-- Texto introductorio -->
+        </div>
+    </div>
 
+    <div class="contenedorestadisticas"> <!-- Contenedor de estadísticas -->
+        <div class="estadisticas"> <!-- Agrupa las estadísticas -->
+            <div class="itemsestadisticas"> <!-- Ítem de estadística individual -->
+                <h3>15</h3> <!-- Cantidad de títulos -->
+                <p>Títulos Nacionales</p> <!-- Descripción -->
+            </div>
+            <div class="itemsestadisticas">
+                <h3>1</h3>
+                <p>Copa Libertadores</p>
+            </div>
+            <div class="itemsestadisticas">
+                <h3>1</h3>
+                <p>Copa Sudamericana</p>
+            </div>
+            <div class="itemsestadisticas">
+                <h3>1908</h3>
+                <p>Año de Fundación</p>
+            </div>
+        </div>
 
+        <div class="contenedordefotos"> <!-- Contenedor de tarjetas de fotos -->
+            <div class="fotos"> <!-- Tarjeta individual -->
+                <img src="fotos/casla1.jpg" alt="Escudo San Lorenzo"> <!-- Imagen representativa -->
+                <h3>Nuestra Historia</h3> <!-- Título de la tarjeta -->
+                <p>Fundado el 1 de abril de 1908, San Lorenzo nació en el barrio de Almagro gracias a la iniciativa del padre Lorenzo Massa.</p>
+            </div>
+            <div class="fotos">
+                <img src="fotos/casla3.jpg" alt="Estadio">
+                <h3>El Nuevo Gasómetro</h3>
+                <p>Nuestro hogar, el Estadio Pedro Bidegain, conocido como el Nuevo Gasómetro, es uno de los más modernos de Sudamérica.</p>
+            </div>
+            <div class="fotos">
+                <img src="fotos/casla2.jpg" alt="Hinchada">
+                <h3>La Hinchada</h3>
+                <p>La barra brava más grande del mundo, conocida como "La Gloriosa", es reconocida por su pasión y compromiso.</p>
+            </div>
+        </div>
+    </div>
 
-        <!--Pie de pagina--> 
-    <footer>
-    
-        <!--href Para ir a Promiedos--> 
-        <a href="https://www.promiedos.com.ar/">Entrar a Promiedos</a>
-       
-        <!--Target para ir a la pagina de promiedos pero en otra pestaña--> 
-        <a target="_blank" href="https://www.promiedos.com.ar/">Otra pagina promiedos</a>
-       
-        <!--Para ir al inicio--> 
-        <a href="#Inicio">Ir al inicio</a> 
-    
+    <footer> <!-- Pie de página -->
+        <div class="social-links"> <!-- Links a redes sociales -->
+            <a href="https://x.com/SanLorenzo" target="_blank">Twitter</a> <!-- Abre Twitter en nueva pestaña -->
+            <a href="https://www.instagram.com/lautignz/?hl=es-la" target="_blank">Instagram</a> <!-- Abre Instagram en nueva pestaña -->
+        </div>
+        <p>&copy; 2025 - Página para la facultad de San Lorenzo, hecho por Lautaro Gonzalez </p> <!-- Créditos de la página -->
     </footer>
-
-
-
 
 </body>
 </html>
