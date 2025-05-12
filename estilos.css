@@ -1,305 +1,99 @@
-        :root {  /*Codigo primcipal de donde despues podes usar para el resto del css */
-            --primary-color: #002856;
-            --secondary-color: #e30613;
-            --text-color: #ffffff;
-            --transition: all 0.3s ease;
-        }
-        
-
-        *  { /* Codigo universal, le indica a la pagina que: */
-            margin: 0; /*  Eliminar cualquier margen que los navegadores puedan aplicar por defecto a los elementos */
-            padding: 0; /*  Eliminar cualquier relleno (espacio interior) que los navegadores puedan aplicar por defecto a los elementos */
-            box-sizing: border-box; /* Cambiar cómo se calculan los tamaños de los elementos, para que el ancho y la altura incluyan los bordes y el relleno, no solo el contenido */
-        } 
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--primary-color);
-            padding: 20px; /** el tamaño del color del fondo del titulo*/
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: var(--text-color);
-            animation: fadeInDown 1s ease;
-        }
-
-        nav {
-            background-color: var(--secondary-color);
-            padding: 15px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        nav a {
-            color: var(--text-color);
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            padding: 8px 15px;
-            border-radius: 20px;
-            transition: var(--transition);
-        }
-
-        nav a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-        .titulo {
-            background: linear-gradient(rgba(0, 40, 86, 0.8), rgba(0, 40, 86, 0.8)),
-                url('fotos/casla3.jpg'); /* Imagen de fondo */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white; /* O el color que quieras */
-            padding: 50px;
-            margin-bottom: 40px;
+:root {  /* Variables globales reutilizables */
+    --primary-color: #002856;           /* Color azul oscuro principal */
+    --secondary-color: #e30613;         /* Color rojo secundario */
+    --text-color: #ffffff;              /* Color de texto blanco */
+    --transition: all 0.3s ease;        /* Transición suave para efectos */
 }
 
-        .titulo h2 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            animation: fadeInUp 1s ease;
-        }
+* {  /* Selector universal: afecta a todos los elementos */
+    margin: 0;                          /* Elimina márgenes por defecto */
+    padding: 0;                         /* Elimina rellenos por defecto */
+    box-sizing: border-box;            /* Incluye padding y borde en el tamaño total */
+}
 
-        .titulo p {
-            font-size: 1.2em;
-            max-width: 600px;
-            margin: 0 auto;
-            animation: fadeInUp 1s ease 0.3s;
-            opacity: 0;
-            animation-fill-mode: forwards;
-        }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Fuente general */
+    background-color: #f5f5f5;                                     /* Fondo gris claro */
+    color: #333;                                                   /* Color de texto gris oscuro */
+    line-height: 1.6;                                              /* Espaciado entre líneas */
+}
 
-        .contenedorestadisticas {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+header {
+    background-color: var(--primary-color);  /* Fondo azul */
+    padding: 20px;                           /* Espaciado interno */
+    text-align: center;                      /* Centrado del contenido */
+    position: relative;                      /* Posición relativa */
+    overflow: hidden;                        /* Oculta contenido desbordado */
+}
 
-        .contenedordefotos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
+header h1 {
+    margin: 0;                                /* Elimina margen del título */
+    font-size: 2.5em;                         /* Tamaño grande */
+    color: var(--text-color);                /* Texto blanco */
+    animation: fadeInDown 1s ease;           /* Animación de entrada desde arriba */
+}
 
-        .fotos {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: var(--transition);
-        }
+nav {
+    background-color: var(--secondary-color); /* Fondo rojo */
+    padding: 15px;                             /* Espaciado interno */
+    text-align: center;                        /* Centrado de los links */
+    position: sticky;                          /* Se queda fijo arriba */
+    top: 0;                                     /* Desde arriba */
+    z-index: 100;                               /* Se pone delante de otros elementos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Sombra sutil debajo */
+}
 
-        .fotos:hover {
-            transform: translateY(-10px);
-        }
+nav a {
+    color: var(--text-color);                  /* Texto blanco */
+    text-decoration: none;                     /* Sin subrayado */
+    margin: 0 15px;                            /* Separación entre links */
+    font-weight: bold;                         /* Texto en negrita */
+    padding: 8px 15px;                         /* Espaciado interno del link */
+    border-radius: 20px;                       /* Bordes redondeados */
+    transition: var(--transition);             /* Transición suave */
+}
 
-        .fotos img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
+nav a:hover {
+    background-color: var(--secondary-color);  /* Fondo rojo al pasar el mouse */
+    transform: translateY(-2px);               /* Levanta el botón 2px */
+}
 
-        
+.titulo {
+    background: linear-gradient(rgba(0, 40, 86, 0.8), rgba(0, 40, 86, 0.8)), url('fotos/casla3.jpg'); /* Fondo con imagen y degradado oscuro encima */
+    background-size: cover;              /* Cubre toda el área */
+    background-position: center;         /* Centra la imagen */
+    background-repeat: no-repeat;        /* No repite la imagen */
+    height: 400px;                       /* Altura del banner */
+    display: flex;                       /* Usa Flexbox */
+    align-items: center;                /* Centra verticalmente */
+    justify-content: center;            /* Centra horizontalmente */
+    text-align: center;                  /* Centra el texto */
+    color: white;                        /* Texto blanco */
+    padding: 50px;                       /* Espaciado interno */
+    margin-bottom: 40px;                /* Espacio abajo del banner */
+}
 
-        .estadisticas {
-            display: flex;
-            justify-content: space-around;
-            margin: 40px 0;
-            flex-wrap: wrap;
-        }
+.titulo h2 {
+    font-size: 3em;                      /* Tamaño grande */
+    margin-bottom: 20px;                /* Espacio debajo del título */
+    animation: fadeInUp 1s ease;        /* Animación desde abajo */
+}
 
-        .itemsestadisticas {
-            text-align: center;
-            padding: 20px;
-        }
+.titulo p {
+    font-size: 1.2em;                   /* Tamaño del texto */
+    max-width: 600px;                   /* Ancho máximo */
+    margin: 0 auto;                     /* Centrado horizontal */
+    animation: fadeInUp 1s ease 0.3s;   /* Animación con retraso */
+    opacity: 0;                         /* Comienza invisible */
+    animation-fill-mode: forwards;      /* Mantiene el resultado de la animación */
+}
 
-        .itemsestadisticas i {
-            font-size: 2.5em;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
+.contenedorestadisticas {
+    max-width: 1200px;                  /* Ancho máximo del contenedor */
+    margin: 0 auto;                     /* Centrado horizontal */
+    padding: 40px 20px;                 /* Espaciado interior */
+}
 
-        .itemsestadisticas h3 {
-            font-size: 2em;
-            color: var(--secondary-color);
-        }
-
-        footer {
-            background-color: var(--primary-color);
-            color: var(--text-color);
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-
-        .social-links {
-            margin: 20px 0;
-        }
-
-        .social-links a {
-            color: var(--text-color);
-            font-size: 1.5em;
-            margin: 0 10px;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            color: var(--secondary-color);
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-        nav a {
-                margin: 5px 0;
-                display: block;
-                width: 100%;
-                text-align: center;
-            }
-
-        .hero h2 {
-                font-size: 2em;
-            }
-        }
-
-        .contenedor-contacto {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        .formulario-contacto {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .campo-formulario {
-            margin-bottom: 20px;
-        }
-
-        .campo-formulario label {
-            display: block;
-            margin-bottom: 5px;
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-
-        .campo-formulario input,
-        .campo-formulario textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-
-        .campo-formulario textarea {
-            resize: vertical;
-        }
-
-        .boton-enviar {
-            background-color: var(--secondary-color);
-            color: var(--text-color);
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: bold;
-            transition: var(--transition);
-        }
-
-        .boton-enviar:hover {
-            background-color: #c00510;
-            transform: translateY(-2px);
-        }
-
-        .informacion-contacto {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .informacion-contacto h3 {
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            font-size: 1.5em;
-        }
-
-        .detalle-contacto p,
-        .horario-atencion p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        .horario-atencion h4 {
-            color: var(--secondary-color);
-            margin: 20px 0 10px;
-        }
-
-        @media (max-width: 768px) {
-            .contenedor-contacto {
-                grid-template-columns: 1fr;
-            }
-            
-            .formulario-contacto,
-            .informacion-contacto {
-                margin-bottom: 30px;
-            }
-        }
-            
+.contenedordefotos {
+    display: grid;                      /* Muestra en cuadrícula */
+    grid-template-columns: repeat(auto-fit, minmax(300px,
