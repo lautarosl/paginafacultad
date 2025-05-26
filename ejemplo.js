@@ -50,6 +50,25 @@ console.log(persona); //muestra el objeto completo
 //arreglos
 let primos = [2, 3, 5, 7, 11];  
 
-console.log(primos[4]); //muestra el arreglo completo
+console.log(primos[4]); //muestra el arreglo completo   
+primos[5] = 23; //agregar un elemento al arreglo        
+console.log(primos); //muestra el arreglo completo      
+
+//cargar un vector de 100 elementos y ordenarlos 
+let vector = []   //cargar de un vector aleatorio 
+for (let i = 0 ; i<100; i++){    
+
+vector.push(Math.floor(Math.random()*1000) + 1);
+
+}
+
+console.log(vector);    
+
+vector.sort((a,b)=>a-b);
+console.log("Ya ordenado", vector)
+
+
+
+
 
 
